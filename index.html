@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A personal poetry portfolio showcasing stories, emotions, and reflections."
+    />
+    <title>Lisolihle | Poetry Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="comments.css" />
+    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <!-- <a class="brand" href="#home" aria-label="Go to home page">A</a> -->
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="#home">Home</a>
+          <a href="#poems">Poems</a>
+          <a href="about.html">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Poetry • stories • feelings</p>
+          <h1>Hello. I am Lisolihle.</h1>
+          <p class="hero-text">
+            I write about love, struggle, identity, and the quiet moments that shape us.
+          </p>
+          <div class="cta-group">
+            <a href="#poems" class="btn btn-primary">Explore</a>
+            <a href="#about" class="btn btn-secondary">About me</a>
+          </div>
+        </div>
+
+        <div class="bubbles" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </section>
+
+      <section class="poems section" id="poems">
+        <div class="container">
+          <div class="section-heading">
+            <div class="section-kicker">
+              <p class="section-tag">The words We/I never spoke</p>
+              <button
+                class="info-toggle"
+                type="button"
+                aria-label="About this poetry series"
+                aria-expanded="false"
+                aria-controls="series-info"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 11v5"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </button>
+              <div class="info-panel" id="series-info" role="region" aria-labelledby="series-info-title" hidden>
+                <h3 id="series-info-title">About this series</h3>
+                <p>
+                  These poems hold the feelings and thoughts my heart wanted to express, but never had the chance to say aloud. I began writing when my best friend was offline and I had no one else to share my feelings with.
+                </p>
+                <p>
+                  I had written poems for fun and school competitions in high school, but I never imagined that writing would help save me, comfort me, and keep me grounded. We all go through difficult things, and love can leave us feeling miserable, sad, or overwhelmed—but it can also make us happy, help us see beauty, and give us strength.
+                </p>
+                <p>
+                  This series is not here to make you feel sad. It is a space for my feelings and thoughts, and for the words some of us struggle to say: the truths we avoid and the things we never thought we could admit. These poems give those feelings a place to be heard.
+                </p>
+              </div>
+            </div>
+            <h2>Poems to read</h2>
+          </div>
+
+          <div class="poem-grid">
+            <article class="poem-card">
+              <img src="Thief.png" alt="The Thief cover art" />
+              <div class="card-overlay">
+                <h3>The Thief</h3>
+                <p>A tale of love, loss, and secrets.</p>
+                <a href="./poem-index.html" class="btn btn-primary">Read</a>
+              </div>
+            </article>
+
+            <article class="poem-card">
+              <img src="i am just a guy.png" alt="I Am Just A Guy cover art" />
+              <div class="card-overlay">
+                <h3>I Am Just A Guy</h3>
+                <p>A journey through emotions and loneliness.</p>
+                <span class="btn btn-primary" aria-label="I Am Just A Guy is coming soon">Coming soon</span>
+              </div>
+            </article>
+
+            <article class="poem-card">
+              <img src="Adventure.png" alt="Adventure Love cover art" />
+              <div class="card-overlay">
+                <h3>Adventure Love</h3>
+                <p>Fantasy, courage, and true friendship.</p>
+                <a href="./Adventureoflifetime.html" class="btn btn-primary">Read</a>
+              </div>
+            </article>
+
+            <article class="poem-card">
+              <img src="Anxiety.png" alt="Anxiety cover art" />
+              <div class="card-overlay">
+                <h3>Anxiety</h3>
+                <p>The silent battle within.</p>
+                <a href="./Anxiety-poem.html" class="btn btn-primary">Read</a>
+              </div>
+            </article>
+
+            <article class="poem-card">
+              <img
+                src="./Deja%20Vu%20on%20Rain-Soaked%20Pavement.png"
+                alt="Deja Vu on Rain-Soaked Pavement cover art"
+              />
+              <div class="card-overlay">
+                <h3>Deja Vu</h3>
+                <p>A poem about repeating patterns, anxiety, and finding a way forward.</p>
+                <a
+                  href="./Dejavu-index.html"
+                  class="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >Read</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section" id="about">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <p class="section-tag">About me</p>
+            <h2>Stories told through emotion.</h2>
+            <p>
+              This collection reflects the realities of personal growth, quiet pain, and the meaningful
+              moments that shape a life. Every page is a place where feelings become words.
+            </p>
+          </div>
+          <div class="about-card">
+            <p>
+              “I write for the broken, the hopeful, and everyone in between — to remind them they are
+              never as alone as they think.”
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <section class="comment-section" aria-labelledby="comment-heading">
+      <h2 id="comment-heading">Leave a Comment</h2>
+      <div class="commonninja_component pid-f5d85b24-4941-4e3a-b25a-b9a53d34de28"></div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Lisolihle</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#poems">Poems</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

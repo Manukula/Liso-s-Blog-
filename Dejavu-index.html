@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deja Vu | Poetry</title>
+  <link rel="stylesheet" href="comments.css">
+  <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+  <style>
+    :root {
+      --page-bg: #f8f5f0;
+      --page-text: #2e2a27;
+      --card-bg: #fffdf8;
+      --card-border: #e3ded7;
+      --button-bg: #6b5b4b;
+      --button-hover: #3e2f20;
+      --muted: #9b8b7a;
+      --accent: #b1a393;
+    }
+
+    body {
+      background-color: var(--page-bg);
+      font-family: 'Georgia', serif;
+      color: var(--page-text);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      text-align: center;
+      user-select: none;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .page-home-link {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 20;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.7rem 1rem;
+      border-radius: 999px;
+      background: rgba(17, 17, 17, 0.5);
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      backdrop-filter: blur(6px);
+    }
+
+    .page-home-link:hover,
+    .page-home-link:focus-visible {
+      background: rgba(17, 17, 17, 0.75);
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      text-align: center;
+    }
+    /* Play Button */
+    #playBtn {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background-color: var(--button-bg);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 30px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    #playBtn:hover {
+      background-color: var(--button-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Book styles */
+    .book {
+      background-color: #fffdf8;
+      padding: 60px 80px;
+      width: 600px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+      border: 1px solid #e3ded7;
+      border-radius: 8px;
+      position: relative;
+      transition: opacity 0.6s ease-in-out;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 1.8em;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+      color: #5a4633;
+    }
+
+    p {
+      white-space: pre-line;
+      line-height: 1.7;
+      font-size: 1.05em;
+    }
+
+    .author {
+      text-align: right;
+      margin-top: 40px;
+      font-style: italic;
+      color: #6b5b4b;
+    }
+
+    .page-number {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #9b8b7a;
+    }
+
+    .click-hint {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.9em;
+      color: #b1a393;
+      animation: blink 1.5s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+
+    .nav-buttons {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: #6b5b4b;
+      font-size: 1em;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    button:hover {
+      color: #3e2f20;
+    }
+
+    /* Responsive styles */
+    @media(max-width: 700px) {
+      .book {
+        width: 85%;
+        padding: 40px 30px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="reader.css">
+</head>
+<body>
+  <a class="page-home-link" href="index.html" aria-label="Back to portfolio home">Home</a>
+<div class="container">
+  <div class="reader-controls">
+    <button id="playBtn" type="button">Start reading</button>
+    <audio id="bgMusic" src="Lloyiso - 'Gone' (Official Lyric Video) [VdEkBwE3Uao].mp3" controls preload="none" loop aria-label="Optional background music"></audio>
+  </div>
+
+  <!-- Book Pages -->
+  <div class="book" id="page1" style="display:none; opacity:0;">
+    <h1>De ja vu(the same)</h1>
+    <p>
+        What shold I do 
+        When every relationship I start
+        Ends up the same
+
+        How am I supposed to be free
+        when anxiaty and depression
+        keep me in cycle of suppression
+
+        How am I supposed to feel 
+        when life feels like 
+        one big allusion
+        I can't love the way I want to 
+        coz they will say 
+        I am delusional
+        maybe the way I want to love is unusual
+    </p>
+    <div class="page-number">Page 1</div>
+  </div>
+
+  <div class="book" id="page2" style="display:none; opacity:0;">
+    <h1>I am just a guy</h1>
+    <p>
+        I keep getting hurt the same way 
+        I hurt me the same way 
+        Love feeds me the same pain
+        I keep running in the same place
+        trying to figure things  out 
+        and finding my own way 
+
+        I see them coming 
+        those red flags, fleshing 
+        fleshing fleshing
+
+        i see the red tape
+        yet I go to them rushing
+        smiling
+        maybe i am toxic
+        I mean we all toxic 
+
+    </p>
+    <div class="author">— Lisolihle</div>
+    <div class="page-number">Page 2</div>
+  </div>
+
+  <div class="book" id="page3" style="display:none; opacity:0;">
+    <h1>Deja vu (the same)</h1>
+    <p>
+        What am I afraid of 
+        maybe I am so used leaving
+        with anxiety, fear, depression
+        they have be came one of my identy
+        but they do not define me 
+
+        I need to break this stigma
+        i need to break out from this dream
+        I need to wake up from this nightmare
+        Monday, tuesday, wednesday
+        Feels like i keep on meeting the same person
+        when i ask who are you 
+        they say I am deja vu
+
+        to change this is for me 
+        to first love the present me 
+        so please someone please wake me up 
+        from this dream
+</p>
+    <div class="page-number">Page 3</div>
+  </div>
+
+  <!-- Navigation Buttons -->
+  <div class="nav-buttons" style="margin-top: 20px;">
+    <button id="prevBtn" type="button" style="display:none;">← Previous</button>
+    <button id="nextBtn" type="button" style="display:none;">Next →</button>
+  </div>
+
+  <div class="click-hint">Use the music controls if you would like to listen while reading.</div>
+  <section class="comment-section" aria-labelledby="comment-heading">
+    <h2 id="comment-heading">Leave a Comment</h2>
+    <div class="commonninja_component pid-f5d85b24-4941-4e3a-b25a-b9a53d34de28"></div>
+  </section>
+</div>
+
+<script>
+  const playBtn = document.getElementById('playBtn');
+  const page1 = document.getElementById('page1');
+  const page2 = document.getElementById('page2');
+  const page3 = document.getElementById('page3');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const clickHint = document.querySelector('.click-hint');
+
+  let currentPage = 1;
+  let started = false;
+
+  playBtn.addEventListener('click', () => {
+    if (!started) {
+      started = true;
+      playBtn.style.display = 'none';
+      showPage(1);
+    }
+  });
+
+  function showPage(pageNumber) {
+    [page1, page2, page3].forEach((page) => {
+      if (page) {
+        page.style.display = 'none';
+        page.style.opacity = '0';
+      }
+    });
+
+    const page = document.getElementById('page' + pageNumber);
+    if (!page) return;
+
+    page.style.display = 'block';
+    setTimeout(() => {
+      page.style.opacity = '1';
+    }, 50);
+
+    currentPage = pageNumber;
+
+    if (prevBtn) {
+      prevBtn.style.display = currentPage === 1 ? 'none' : 'inline-block';
+    }
+
+    if (nextBtn) {
+      nextBtn.style.display = currentPage === 3 ? 'none' : 'inline-block';
+    }
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (started && currentPage < 3) {
+        showPage(currentPage + 1);
+      }
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (started && currentPage > 1) {
+        showPage(currentPage - 1);
+      }
+    });
+  }
+</script>
+</body>
+</html>

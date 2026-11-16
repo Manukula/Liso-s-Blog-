@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Meet Lisolihle, a poet, storyteller, educator, and creative technologist."
+    />
+    <title>About Lisolihle | Poetry Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="nav-links">
+          <a href="./index.html#home">Home</a>
+          <a href="./index.html#poems">Poems</a>
+          <a href="#about" aria-current="page">About</a>
+          <a href="./index.html#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="about section" id="about">
+        <div class="container about-grid">
+          <div class="about-copy">
+            <p class="section-tag">A little about me</p>
+            <div class="about-title-row">
+              <h1>Who is Lisolihle?</h1>
+              <button
+                class="info-toggle"
+                type="button"
+                aria-label="View my library photo"
+                aria-expanded="false"
+                aria-controls="library-photo-info"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 11v5"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </button>
+              <div
+                class="info-panel"
+                id="library-photo-info"
+                role="region"
+                aria-labelledby="library-photo-title"
+                hidden
+              >
+                <h3 id="library-photo-title">Me in the library</h3>
+                <img
+                  class="info-panel-image"
+                  src="Me%20picture%20in%20the%20library.jpeg"
+                  alt="Lisolihle in the library"
+                />
+              </div>
+            </div>
+            <p>
+              I'm Lisolihle, a poet, storyteller, and curious creative. I write
+              about love, struggle, and identity, drawing on the many lives
+              I've felt I've lived in a short time—and, sometimes, a weakness
+              for heartbreak. I hope my words help readers feel seen and a
+              little less alone.
+            </p>
+            <p>
+              I'm a free spirit and what I call a “nutrovert”: I enjoy a little
+              bit of everything, as long as it feels right. In my spare time,
+              you'll find me watching anime, reading manga, singing, or
+              listening to almost every kind of music.
+            </p>
+            <img
+              class="about-portrait"
+              src="Me%20picture%20in%20the%20library.jpeg"
+              alt="Lisolihle in the library"
+              loading="lazy"
+            />
+          </div>
+
+          <aside class="about-card about-profile-card">
+            <p class="about-quote">
+              “I write for the broken, the hopeful, and everyone in between—to
+              remind them they are never as alone as they think.”
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="work-section section" aria-labelledby="work-title">
+        <div class="container">
+          <div class="work-heading">
+            <div class="section-kicker">
+              <p class="section-tag">Teaching, creating, and learning</p>
+              <button
+                class="info-toggle"
+                type="button"
+                aria-label="More information about my work"
+                aria-expanded="false"
+                aria-controls="work-info"
+              >
+                <svg aria-hidden="true" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 11v5"></path>
+                  <path d="M12 8h.01"></path>
+                </svg>
+              </button>
+              <div
+                class="info-panel"
+                id="work-info"
+                role="region"
+                aria-labelledby="work-info-title"
+                hidden
+              >
+                <h3 id="work-info-title">More about my work</h3>
+                <img
+                  class="info-panel-image"
+                  src="inkcubeko.jpeg"
+                  alt="The Inkcubeko Youth and Science Centre"
+                />
+                <p>
+                  At Inkcubeko Youth and Science Centre, I also contribute
+                  graphic design and technical support, and helped create the
+                  centre's first robotics website. I have also built tools to
+                  help the team record visitors to the centre.
+                </p>
+              </div>
+            </div>
+            <h2 id="work-title">My work</h2>
+          </div>
+
+          <div class="work-grid">
+            <div class="work-gallery">
+              <img
+                class="work-image"
+                src="talking.jpeg"
+                alt="Lisolihle speaking with learners"
+                loading="lazy"
+              />
+            </div>
+            <div class="work-copy">
+              <p>
+                I work at Inkcubeko Youth and Science Centre as a facilitator,
+                teaching and mentoring young people and adults in robotics and
+                coding. I also teach computer classes, including the
+                International Computer Driving Licence (ICDL), and help with
+                administration.
+              </p>
+              <p>
+                I also support schools in George and Mossel Bay with Computer
+                Applications Technology (CAT) for grades 10–12. At South Cape
+                College, I tutor N4–N6 students in computer practice, sharing
+                what I learned as a student myself.
+              </p>
+              <p>
+                I enjoy bringing creativity and technology together, and I'm
+                always looking for new ways to learn and help others grow.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Lisolihle</p>
+        <div class="footer-links">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#poems">Poems</a>
+          <a href="#about">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
